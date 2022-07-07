@@ -1,12 +1,22 @@
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+from tkinter import *
+from PIL import ImageTk, Image
+
+#Create a frame
+root = Tk()
+root.title("CrazyChatBot")
+root.geometry("500x1000")
+
+#Add a background
+bg = ImageTk.PhotoImage(file="background.jpg")
+canvas = Canvas(root, width=500, height=1000)
+canvas.pack(fill=BOTH, expand=True)
+canvas.create_image(0, 0, image=bg, anchor='nw')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# BG_GRAY = "#ABB9B9"
+# BG_GRAY = "#ABB2B9"
+#TEXT_COLOR = "#EAECEE"
+root.mainloop()
